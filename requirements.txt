@@ -1,6 +1,5 @@
-streamlit
 ccxt
-pandas==2.1.4
-numpy==1.26.4
+pandas
 pandas-ta
+numpy<2.0.0
 requests
