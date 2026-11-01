@@ -46,7 +46,7 @@ def calculate_rsi(df, window=14):
 # 6. Fetch Data and Display
 @st.cache_data(ttl=60) # Cache for 60 seconds for mobile speed
 def fetch_market_data(sym, tf):
-    exchange = ccxt.binance()
+    exchange = ccxt.kucoin()
     bars = exchange.fetch_ohlcv(sym, timeframe=tf, limit=100)
     df = pd.DataFrame(bars, columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
     df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
